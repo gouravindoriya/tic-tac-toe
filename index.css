@@ -1,0 +1,250 @@
+
+
+
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#Nametag {
+ 
+    font-family: Arial, sans-serif;
+    font-size: 16px; 
+   
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 4px;
+    right: 0;
+}
+
+#Nametag a {
+    /* CSS properties for the <a> element */
+    color: rgb(0, 0, 0); /* Change the link color to blue */
+    text-decoration: none; /* Remove underline */
+    /* font-weight: bold; Make the text bold */
+    transition: color 0.3s; /* Add a smooth color transition */
+    padding: 10px;
+}
+
+#Nametag a:hover {
+    /* CSS properties for the <a> element on hover */
+    /* color: rgb(255, 255, 255); /* Change the link color on hover */
+    /* background-color: #000000; */ 
+outline: 1px solid grey;
+border-radius: 8px;
+    
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+.container{
+    /* padding: 100px; */
+}
+.game-container { 
+    
+    width: 80vw;
+    max-width: 500px;
+    height: 80vw;
+   max-width: 500px;
+   
+    margin: 20px;padding: 10px;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    user-select: none;
+}
+
+.gamebox {
+    color: rgb(2, 2, 26);
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: 1px solid grey;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    transition: background-color 0.3s ease;
+    font-size:4em;
+}
+
+.gamebox:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#resetBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#resetBtn:hover {
+    background-color: #555;
+} 
+/* score board */
+.scoreboard{
+    width: 80vw;
+    max-width: 500px;
+    /* aspect-ratio: 6/1; */
+    padding: 5px;
+    margin: 50px;
+    /* background: pink; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid grey;
+    border-radius: 4px;
+    font-size: 1rem;
+
+}
+.player1,.player2{
+    display: flex;
+    align-items: center;
+}
+.player2{
+    flex-direction: row-reverse;
+}
+.player1_png,.player2_png{
+    height: 70%;
+    margin: 4%;
+    aspect-ratio: 1;
+    /* background: yellow; */
+    border-radius: 100%;
+   
+}
+.player1_png>img,.player2_png>img{
+    width: 100%;
+    aspect-ratio: 1;
+   
+   
+}
+.toggleClassForBackground{
+    border: 3px solid rgb(4, 255, 75);
+    animation:  blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        border: 3px solid rgb(4, 255, 75);
+    }
+    100% {
+        border: 3px solid rgb(161, 255, 187);
+    }
+}
+
+
+.scoreboard>div>div:nth-child(2){
+    /* background: #ff6969; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+
+
+
+
+/* landing page css */
+#landingpage{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+ 
+
+    
+    transition: all 2s ease;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+.choicePlayer{
+    background: rgba(255, 255, 255, 0);
+    line-height: 50px;
+    padding: 4px 20px;
+    margin: 40px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: capitalize;
+  background: #fdfdfd22;
+  border-radius: 4px;
+  color: rgb(205, 255, 7);
+  user-select: none;
+  
+}
+.maincontainerform{
+    width: 100vw;
+    height: 100vh;
+    
+    position: absolute;
+    display: flex;
+flex-direction: column;
+
+align-items: center;
+/* margin: 0px auto; */
+
+}
+.charactersvg{
+    width: 90%;
+    max-width: 700px;
+    max-height: fit-content;
+    display: grid;
+grid-template-columns: repeat(4, 1fr);
+background: #fdfdfd22;
+border-radius: 12px;
+padding: 14px;
+grid-gap: 10px;
+
+}
+.characterdiv-item{
+    /* width: 40px;
+    height: 40px; */
+
+}
+.characterdiv-item>img{
+    width: 100%;
+    aspect-ratio: 1;
+}
+.characterdiv-item>img:hover{
+    border: 2px solid rgb(79, 255, 79);
+    border-radius: 100%;
+}
